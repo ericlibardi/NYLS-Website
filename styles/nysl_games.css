@@ -1,0 +1,243 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("../images/Youth-Soccer.jpg");
+    background-position: 130px 0;
+    background-size: 160vh;
+    border-bottom: 1px solid grey;
+}
+.logo {
+    padding: 50px 0;
+    align-self: center;
+    background-image: radial-gradient(rgb(37, 163, 37), rgb(139, 199, 29));
+    width: 16%;
+    display: flex;
+    justify-content: center;
+}
+#logo {
+    animation-name: logotransform;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes logotransform {
+    0%  {transform: rotate(0deg);}
+    50%  {transform: rotate(90deg);}
+}
+.header_right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;  
+    justify-content: space-between;
+    width: 84%;
+}
+.header_right h1 {
+    font-size: 3rem;
+    padding: 10px 30px;
+    color: white;
+}
+.button {
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 5px 20px black;
+    color: black;
+    padding: 10px 10px;
+    background-color: grey;
+    border-radius: 0 0 10px 10px;
+    margin-left: 5px;
+    transition-duration: 0.5s;
+}
+.button:hover {
+    background-color: darkslategray;
+}
+#page_par {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 424px;
+    background-image: url("../images/grass-2616911_1280.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.left-content {
+    width: 16%;
+    height: 424px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid green;
+}
+.left-content h3 {
+    background-color: rgba(255,255,255,0.4);
+    padding: 160px 10px;
+}
+.right-content {
+    width: 84%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.game_descrip_header {
+    max-width: 400px;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 30px;
+}
+.game_descrip_header h4, .game_descrip_header h2, .game_descrip_header p {
+    padding-bottom: 7px;
+}
+table {
+    border-collapse: collapse;
+}
+.game_content td {
+    border: 1px solid white;
+    padding: 5px 10px;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.game_content th {
+    background-color: darkslategray;
+    padding: 5px 20px;
+    color: white;
+}
+.game_tabs {
+    position: relative;
+    min-height: 305px;
+    min-width: 470px;
+    margin-top: 45px;
+}
+.game_tab {
+    float: left;
+}
+.game_tab label {
+    background: rgb(209, 209, 209);
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
+}
+.game_tab [type=radio] {
+    display: none;
+}
+.game_content {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    background: rgb(37, 138, 37);
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+[type=radio]:checked ~ label {
+    
+    background: white;
+    border-bottom: 1px solid white;
+    z-index: 2;
+}
+[type=radio]:checked ~ label ~ .game_content {
+    z-index: 1;
+}
+.game_tab label {
+    cursor: pointer;
+}
+.game_locations {
+    margin: 10px 0 5px 0;
+}
+.game_locations h3 {
+    padding-bottom: 5px;
+}
+.location_details {
+    display: flex;
+    overflow-x: scroll;
+    width: 80vmax;
+    background-color: rgba(255,255,255,0.6);
+    padding: 5px;
+    
+}
+.locations_map {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid green;
+} 
+.location_text {
+    margin: 0 5px 0 15px;
+}
+iframe {
+    width: 400px;
+    height: 400px;
+    margin: 0 20px;
+}
+#footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    background-color: black;
+}
+.facebook, .instagram {
+    color: white;
+    font-size: 1.7rem;
+    padding-right: 20px;
+}
+@media only screen and (max-width: 670px) {
+    .logo {
+        padding: 20px;
+        width: 13%;
+    }
+    #logo{
+        width: 50px;
+        height: 50px;
+    }
+    .header_right h1 {
+        font-size: 1.2rem;
+    }
+    .nav_bar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .button {
+        padding: 2px;
+        font-size: 0.9rem;
+    }
+    #page_par {
+        flex-direction: column;
+        justify-content: space-around;       
+    }
+    .left-content {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+    .left-content h3 {
+        padding: 30px;
+        width: 100%;
+    }
+    .game_descrip_header {
+        width: 95%;
+        margin-top: 10px;
+        font-size: 0.8rem;
+    }
+    .right-content {
+        width: 100%;
+    }
+    .game_content th {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+    .game_content td {
+        font-size: 0.6rem;
+    }
+    .facebook, .instagram {
+        font-size: 1.3rem;
+    }
+}

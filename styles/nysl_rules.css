@@ -1,0 +1,148 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("../images/Youth-Soccer.jpg");
+    background-position: 130px 0;
+    background-size: 160vh;
+    border-bottom: 1px solid grey;
+}
+.logo {
+    padding: 50px 0;
+    align-self: center;
+    background-image: radial-gradient(rgb(37, 163, 37), rgb(139, 199, 29));
+    width: 16%;
+    display: flex;
+    justify-content: center;
+}
+#logo {
+    animation-name: logotransform;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes logotransform {
+    0%  {transform: rotate(0deg);}
+    50%  {transform: rotate(90deg);}
+}
+.header_right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;  
+    justify-content: space-between;
+    width: 84%;
+}
+.header_right h1 {
+    font-size: 3rem;
+    padding: 10px 30px;
+    color: white;
+}
+.button {
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 5px 20px black;
+    color: black;
+    padding: 10px 10px;
+    background-color: grey;
+    border-radius: 0 0 10px 10px;
+    margin-left: 5px;
+    transition-duration: 0.5s;
+}
+.button:hover {
+    background-color: darkslategray;
+}
+#page_par {
+    display: flex;
+    flex-wrap: wrap;
+    height: 424px;
+    background-image: url("../images/grass-2616911_1280.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.left-content {
+    width: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid green;
+}
+.left-content h3 {
+    background-color: rgba(255,255,255,0.4);
+    padding: 160px 10px;
+}
+#rules_descrip {
+    width: 84%;
+    max-width: 1000px;
+    height: 390px;
+    overflow-y: scroll;
+    background-color: white;
+    padding: 60px 100px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 15px black;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: justify;
+}
+
+#footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    background-color: black;
+}
+.facebook, .instagram {
+    color: white;
+    font-size: 1.7rem;
+    padding-right: 20px;
+}
+@media only screen and (max-width: 670px) {
+    .logo {
+        padding: 20px;
+        width: 13%;
+    }
+    #logo{
+        width: 50px;
+        height: 50px;
+    }
+    .header_right h1 {
+        font-size: 1.2rem;
+    }
+    .nav_bar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .button {
+        padding: 2px;
+        font-size: 0.9rem;
+    }
+    #page_par {
+        flex-direction: column;
+        justify-content: space-around;       
+    }
+    .left-content {
+        width: 100%;
+    }
+    .left-content h3 {
+        padding: 30px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    #rules_descrip {
+        max-height: 300px; 
+        width: 95%;
+        font-size: 0.9rem;
+        padding: 30px 40px;
+        
+    }
+    .facebook, .instagram {
+        font-size: 1.3rem;
+    }
+}
